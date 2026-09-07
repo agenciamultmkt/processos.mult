@@ -306,3 +306,79 @@ footer.page{
   color:var(--text-dim);
   font-family:'IBM Plex Mono', monospace;
 }
+
+/* V2 — Central de Gestão */
+.wrap.wide{max-width:1120px}
+.home-grid.five{grid-template-columns:repeat(2,1fr)}
+.home-grid.five .home-card:last-child{grid-column:1/-1}
+@media(max-width:640px){.home-grid.five{grid-template-columns:1fr}.home-grid.five .home-card:last-child{grid-column:auto}}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 34px}
+@media(max-width:720px){.quick-grid{grid-template-columns:1fr}}
+.quick{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:15px 16px}
+.quick b{display:block;font-family:'Fraunces',serif;margin-bottom:4px}.quick span{font-size:12.5px;color:var(--text-dim)}
+.client-nav{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}.client-nav a{font-size:12px;text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:7px 11px;color:var(--text-dim)}
+.client-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:24px;margin:0 0 22px}.client-card h2{font-family:'Fraunces',serif;margin:0 0 4px;font-size:22px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 18px}.meta span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;background:var(--surface-2);padding:4px 8px;border-radius:5px;color:var(--text-dim)}
+.client-card h3{font-size:14px;margin:20px 0 8px}.compact{margin:0;padding-left:20px;font-size:13.5px}.compact li{margin:5px 0}.deadline{font-weight:600;color:var(--accent)}
+.table-wrap{overflow-x:auto;margin-bottom:24px}.table-wrap table.ref{min-width:720px;margin-bottom:0}
+.subcard{border-left:3px solid var(--accent-soft);padding:4px 0 4px 16px;margin:16px 0}.subcard h3{margin:0 0 6px}
+.status-note{font-size:12px;color:var(--text-dim);font-family:'IBM Plex Mono',monospace}
+
+/* V2.1 — identidade visual Agência Mult */
+:root{
+  --accent:#F5822C;
+  --accent-strong:#E66F18;
+  --accent-soft:#FFF0E4;
+  --surface-2:#F7EEE6;
+  --border:#E5D8CE;
+  --warn:#A85D1F;
+  --warn-bg:#FFF0DF;
+}
+body{font-size:16px;}
+.wrap{max-width:960px;}
+nav.top .wrap{height:76px;}
+.brand-logo{display:flex;align-items:center;gap:12px;min-width:max-content;}
+.brand-logo img{display:block;width:116px;height:47px;object-fit:contain;}
+.brand-logo .brand-title{font-family:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:var(--text-dim);border-left:1px solid var(--border);padding-left:12px;white-space:nowrap;}
+nav.top .links{font-size:15px;gap:20px;}
+p.lead{font-size:16.5px;}
+.home-card h2{font-size:21px;}
+.home-card p{font-size:14.5px;}
+.step h3{font-size:18px;}
+ul.check li{font-size:15px;}
+.callout{font-size:14.5px;}
+table.ref{font-size:14.5px;}
+table.ref th{font-size:11.5px;}
+.client-card h2{font-size:26px;color:var(--text);}
+.client-card .compact,.client-card p.compact,.client-card ul.compact{font-size:15px;line-height:1.62;}
+.subcard h3{font-size:17px;}
+.meta span{font-size:11.5px;}
+.section-label{color:var(--accent-strong);}
+.client-hint{font-size:14.5px;color:var(--text-dim);margin:0 0 12px;}
+.client-nav{margin-bottom:26px;}
+.client-nav a{font-size:13.5px;padding:8px 13px;transition:.15s ease;color:var(--text-dim);}
+.client-nav a:hover,.client-nav a.active{background:var(--accent);border-color:var(--accent);color:white;}
+.client-view{display:none;animation:clientFade .18s ease;}
+.client-view.active{display:block;}
+@keyframes clientFade{from{opacity:.25;transform:translateY(4px)}to{opacity:1;transform:none}}
+.deadline{color:var(--accent-strong);font-weight:600;}
+.step-num{color:var(--accent-strong);}
+.eyebrow{color:var(--accent-strong);}
+@media(max-width:760px){
+  nav.top .wrap{height:auto;padding-top:10px;padding-bottom:10px;align-items:flex-start;}
+  .brand-logo img{width:96px;height:39px;}
+  .brand-logo .brand-title{font-size:12px;}
+  nav.top .links{gap:13px;font-size:13px;width:100%;overflow-x:auto;padding-bottom:2px;}
+}
+
+/* V2.2 — calendário visual */
+.calendar-toolbar{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.calendar-toolbar h2{font-family:'Fraunces',serif;font-size:25px;margin:0 0 3px}.calendar-toolbar p{margin:0;color:var(--text-dim);font-size:13.5px}
+.calendar-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--surface-2);color:var(--accent-strong);font-size:20px;cursor:pointer}.calendar-btn:hover{background:var(--accent);color:white;border-color:var(--accent)}
+.calendar-windows{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.calendar-window{background:var(--accent-soft);border:1px solid #F4D6BF;border-radius:12px;padding:13px 15px;display:flex;flex-direction:column;gap:4px;font-size:13px}.calendar-window b{color:var(--accent-strong);font-size:13.5px;margin-bottom:2px}.calendar-window span{color:var(--text)}
+.calendar-scroll{overflow-x:auto;border-radius:14px}.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(145px,1fr));min-width:1015px}.calendar-weekdays{background:var(--surface-2);border:1px solid var(--border);border-bottom:0;border-radius:14px 14px 0 0;overflow:hidden}.calendar-weekdays div{padding:9px 10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--text-dim);text-align:center;border-right:1px solid var(--border)}.calendar-weekdays div:last-child{border-right:0}
+#calendarGrid{border-left:1px solid var(--border);border-top:1px solid var(--border);background:var(--border)}
+.calendar-day{min-height:154px;background:var(--surface);padding:9px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}.calendar-day.outside{background:#FAF8F6;color:#B7ADA5}.calendar-day.today{box-shadow:inset 0 0 0 2px var(--accent)}
+.calendar-date{display:flex;align-items:center;justify-content:space-between;font-weight:700;font-size:13px;margin-bottom:7px}.calendar-date span{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;color:white;background:var(--accent);padding:2px 5px;border-radius:999px}
+.calendar-events{display:flex;flex-direction:column;gap:6px}.cal-event{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:6px;padding:6px 7px;line-height:1.25}.cal-event.weekly{border-left-color:#D96D19;background:#FFF5ED}.cal-event.deadline-event{border-left-color:var(--accent-strong)}.cal-event b{display:block;font-size:10.8px;color:var(--accent-strong)}.cal-event span{display:block;font-size:10.8px;color:var(--text);margin-top:2px}.cal-event small{display:block;font-size:9.5px;color:var(--text-dim);margin-top:3px}
+.calendar-conditional{margin:16px 0 26px;background:var(--surface);border:1px dashed var(--border);border-radius:12px;padding:14px 16px}.calendar-conditional h3{margin:0 0 5px;font-size:15px}.calendar-conditional p{margin:0;font-size:13.5px;color:var(--text-dim)}
+@media(max-width:760px){.calendar-windows{grid-template-columns:1fr}.calendar-toolbar{grid-template-columns:auto 1fr auto}.calendar-toolbar p{display:none}}
