@@ -269,6 +269,25 @@ table.ref td{
   vertical-align:top;
 }
 
+.msg{
+  background:var(--accent-soft);
+  border-radius:10px;
+  padding:12px 14px;
+  margin:10px 0 4px;
+  font-size:13.5px;
+  line-height:1.55;
+  color:var(--text);
+}
+.msg .msg-label{
+  display:block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:var(--accent);
+  margin-bottom:6px;
+}
+
 .placeholder{
   border:1.5px dashed var(--border);
   border-radius:12px;
